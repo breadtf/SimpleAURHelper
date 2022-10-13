@@ -26,7 +26,7 @@ def cloneFromAUR(packageName):
 parser = argparse.ArgumentParser()
  
 # Adding optional argument
-parser.add_argument("-G", help = "Clone and build an AUR package")
+parser.add_argument("-G", help = "Clone and build an AUR package", required=True)
  
 # Read arguments from command line
 args = parser.parse_args()
