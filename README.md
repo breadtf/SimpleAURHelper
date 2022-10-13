@@ -9,4 +9,4 @@ A very simple (and bad) AUR helper written in python.
 
 To install, run:
 
-`wget https://raw.githubusercontent.com/BreadTeleporter/SimpleAURHelper/main/install.sh | bash`
+`wget https://raw.githubusercontent.com/BreadTeleporter/SimpleAURHelper/main/install.sh; chmod o+rx install.sh; ./install.sh`
