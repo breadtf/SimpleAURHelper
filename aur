@@ -1,3 +1,4 @@
+#!/bin/python
 #Simple AUR helper written in Python.
 
 import sys
