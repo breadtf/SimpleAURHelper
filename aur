@@ -14,9 +14,11 @@ def cloneFromAUR(packageName):
   print("Cloning", packageName)
   clone = "git clone https://aur.archlinux.org/" + packageName + ".git" 
   os.system(clone) # Cloning
+  try:
+    os.chdir(packageName)
+  except:
+    print("git clone Failed! Please try again later.")
   print("Done! Building...")
-  os.chdir(packageName)
-  
   os.system("makepkg -si")
   os.chdir("..")
   print("Finished! Removing leftovers and exiting...")
