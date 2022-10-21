@@ -1,12 +1,13 @@
 #!/bin/python
 
 import os
-
+if os.geteuid() != 0:
+    print("Root is required to update.")
+    exit()
 print("Please wait, Updating...")
 
 #This is dumb, Replace this later with better code.
 
-os.chdir("~")
 os.system("wget https://raw.githubusercontent.com/BreadTeleporter/SimpleAURHelper/main/install.sh; chmod o+rx install.sh; sudo ./install.sh")
 
 print("Updated!")
