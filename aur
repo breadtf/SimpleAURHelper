@@ -28,10 +28,13 @@ def cloneFromAUR(packageName):
 parser = argparse.ArgumentParser()
  
 # Adding optional argument
-parser.add_argument("-G", help = "Clone and build an AUR package", required=True)
+parser.add_argument("-G", help = "Clone and build an AUR package")
  
 # Read arguments from command line
 args = parser.parse_args()
- 
+
+
 if args.G:
-    cloneFromAUR(args.G)
+  cloneFromAUR(args.G)
+else:
+  print("No arguments specified or they are invalid.")
