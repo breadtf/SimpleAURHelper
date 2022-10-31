@@ -1,4 +1,6 @@
 #!/bin/bash
+echo Installing dependencies...
+sudo pacman -S git
 echo Please wait, cloning repo...
 git clone https://github.com/BreadTeleporter/SimpleAURHelper.git
 cd SimpleAURHelper
