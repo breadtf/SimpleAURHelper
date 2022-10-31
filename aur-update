@@ -1,5 +1,4 @@
 #!/bin/python
-
 import os
 if os.geteuid() != 0:
     print("Root is required to update.")
