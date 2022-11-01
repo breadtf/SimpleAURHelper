@@ -1,6 +1,12 @@
 #!/bin/bash
 echo Installing dependencies...
-sudo pacman -S git
+FILE=/usr/bin/git
+if test -f "$FILE"; then
+    echo Git is installed, skipping.
+else
+		echo Git is not installed, installing...
+		sudo pacman -S git
+fi
 echo Please wait, cloning repo...
 git clone https://github.com/BreadTeleporter/SimpleAURHelper.git
 cd SimpleAURHelper
